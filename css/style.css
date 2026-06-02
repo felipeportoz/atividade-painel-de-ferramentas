@@ -1,15 +1,132 @@
+:root {
+    --bg: #f4f4f4;
+    --card: #ffffff;
+    --border: #d9d9d9;
+    --text: #333;
+    --hover: #ececec;
+}
+
+body.dark {
+    --bg: #1f1f1f;
+    --card: #2d2d2d;
+    --border: #444;
+    --text: #ffffff;
+    --hover: #3a3a3a;
+}
+
 * {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  width: 100%;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  background-color: #f8f9fa;
-  color: #222;
-}   
+    background: var(--bg);
+    color: var(--text);
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    transition: .3s;
+}
+
+header {
+    background: var(--card);
+    border-bottom: 1px solid var(--border);
+    padding: 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header button {
+    width: 50px;
+}
+
+main {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+aside {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 10px;
+
+    padding: 15px;
+}
+
+aside button {
+    padding: 40px;
+    border: none;
+    background: var(--bg);
+    color: var(--text);
+
+    border-radius: 12px;
+    cursor: pointer;
+
+    transition: .3s;
+}
+
+aside button:hover {
+    background: var(--hover);
+}
+
+.content {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+
+    padding: 25px;
+}
+
+.screen {
+    display: none;
+}
+
+.screen.active {
+    display: block;
+}
+
+footer {
+    background: var(--card);
+    border-top: 1px solid var(--border);
+
+    text-align: center;
+    padding: 15px;
+}
+
+#tema-btn {
+    background-color: blue;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+@media (max-width: 768px) {
+
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    aside {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    aside button {
+        flex: 1;
+        min-width: 140px;
+    }
+
+}

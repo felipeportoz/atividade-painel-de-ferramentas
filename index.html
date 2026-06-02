@@ -1,35 +1,77 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Painel de Ferramentas</title>
-    <script src="./js/script.js" defer></script>
-    <link rel="stylesheet" href="./css/style.css">
+    <script src="js/script.js" defer></script>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <header></header>
-    <h1>Painel de Ferramentas</h1>
+
+    <header>
+        <h1>Painel de Ferramentas</h1>
+
+        <button id="tema-btn">
+            🌙
+        </button>
     </header>
+
     <main>
-        <aside id="menu-lateral">
-            <ul>
-                <li><button>Desafio 1</button></li>
-                <li><button>Desafio 2</button></li>
-                <li><button>Desafio 3</button></li>
-                <li><button>Desafio 4</button></li>
-                <li><button>Desafio 5</button></li>
-                <li><button>Desafio 6</button></li>
-            </ul>
+
+        <aside>
+
+            <button data-target="moedas">Moedas</button>
+
+            <button data-target="imc">IMC</button>
+
+            <button data-target="temperatura">Temperatura</button>
+
+            <button data-target="velocidade">Velocidade</button>
+
+            <button data-target="massa">Massa</button>
+
+            <button data-target="regraTres">Regra de Três</button>
+
         </aside>
-        <section id="conteudo-principal">
+
+        <section class="content">
+
+            <section id="moedas" class="screen active">
+                <h2>Conversor de Moedas</h2>
+            </section>
+
+            <section id="imc" class="screen">
+                <h2>Cálculo de IMC</h2>
+            </section>
+
+            <section id="temperatura" class="screen">
+                <h2>Conversor de Temperatura</h2>
+            </section>
+
+            <section id="velocidade" class="screen">
+                <h2>Conversor de Velocidade</h2>
+            </section>
+
+            <section id="massa" class="screen">
+                <h2>Conversor de Massa</h2>
+            </section>
+
+            <section id="regra-tres" class="screen">
+                <h2>Regra de Três</h2>
+            </section>
+
         </section>
+
     </main>
+
     <footer>
-        <h2>Desenvolvido por Felipe Porto</h2>
+        <p>DESENVOLVIDO POR FELIPE PORTO</p>
     </footer>
+
+
 </body>
 
 </html>
