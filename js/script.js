@@ -28,9 +28,8 @@ temaBtn.addEventListener("click", () => {
 });
 
 //codigo do professor
-const elemento = {
-    aside:document.querySelector("aside"),
-};
+// const elemento = {
+//     aside:document.querySelector("aside"),
+// };
 
-console.log(aside);
-ç
+// console.log(aside);
