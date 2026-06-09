@@ -223,3 +223,48 @@ btnTemperatura.addEventListener("click", () => {
 
 });
 
+//conversor de velocidade
+const btnVelocidade =
+    document.getElementById("btnVelocidade");
+
+btnVelocidade.addEventListener("click", () => {
+
+    let valor =
+        Number(document.getElementById("valorVelocidade").value);
+
+    let tipo =
+        document.getElementById("tipoVelocidade").value;
+
+    let resultado =
+        document.getElementById("resultadoVelocidade");
+
+    if (isNaN(valor)) {
+
+        resultado.textContent =
+            "Digite um valor válido.";
+
+        return;
+    }
+
+    let conta;
+
+    if (tipo === "km") {
+
+        conta =
+            valor * 0.621371;
+
+        resultado.textContent =
+            `${valor} Km/h = ${conta.toFixed(2)} MPH`;
+
+    } else {
+
+        conta =
+            valor / 0.621371;
+
+        resultado.textContent =
+            `${valor} MPH = ${conta.toFixed(2)} Km/h`;
+
+    }
+
+});
+
