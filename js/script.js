@@ -91,3 +91,87 @@ async function pegarCotacao() {
 
 }
 
+const btnImc = document.getElementById("btnImc");
+
+btnImc.addEventListener("click", () => {
+
+    let peso =
+        Number(document.getElementById("peso").value);
+
+    let altura =
+        Number(document.getElementById("altura").value);
+
+    let genero =
+        document.getElementById("genero").value;
+
+    let resultado =
+        document.getElementById("resultadoImc");
+
+    if (!peso || !altura) {
+
+        resultado.textContent =
+            "Preencha peso e altura.";
+
+        return;
+    }
+
+    if (altura === 0) {
+
+        resultado.textContent =
+            "A altura não pode ser 0.";
+
+        return;
+    }
+
+    let imc =
+        peso / (altura * altura);
+
+    let classificacao = "";
+
+    if (genero === "homem") {
+
+        if (imc < 18.5) {
+
+            classificacao = "Abaixo do peso";
+
+        } else if (imc <= 24.9) {
+
+            classificacao = "Peso normal";
+
+        } else if (imc <= 29.9) {
+
+            classificacao = "Sobrepeso";
+
+        } else {
+
+            classificacao = "Obesidade";
+
+        }
+
+    } else {
+
+        if (imc < 18.5) {
+
+            classificacao = "Abaixo do peso";
+
+        } else if (imc <= 23.9) {
+
+            classificacao = "Peso normal";
+
+        } else if (imc <= 28.9) {
+
+            classificacao = "Sobrepeso";
+
+        } else {
+
+            classificacao = "Obesidade";
+
+        }
+
+    }
+
+    resultado.textContent =
+        `Seu IMC é ${imc.toFixed(2)} - ${classificacao}`;
+
+});
+
