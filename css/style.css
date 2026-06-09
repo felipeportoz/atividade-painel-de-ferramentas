@@ -113,34 +113,39 @@ footer {
     padding: 10px;
 }
 
-#imc form {
+#imc.active {
     display: flex;
     flex-direction: column;
     gap: 15px;
-    width: 300px;
 }
 
-#imc input {
+#imc input,
+#imc select {
     padding: 10px;
-    border: 1px solid var(--border);
     border-radius: 8px;
+    border: 1px solid var(--border);
+
+    background: var(--bg);
+    color: var(--text);
 }
 
 #imc button {
     padding: 10px;
     border: none;
+    border-radius: 8px;
+
+    cursor: pointer;
+
     background: var(--bg);
     color: var(--text);
-    border-radius: 8px;
-    cursor: pointer;
 }
 
 #imc button:hover {
     background: var(--hover);
 }
 
-#resultado-imc {
-    margin-top: 20px;
+#resultadoImc {
+    font-size: 18px;
     font-weight: bold;
 }
 

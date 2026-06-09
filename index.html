@@ -70,11 +70,31 @@
             </section>
 
             <section id="imc" class="screen">
+
                 <h2>Cálculo de IMC</h2>
-                <input type="number" name="peso" id="peso" placeholder="Peso (kg)">
-                <input type="number" name="altura" id="altura" placeholder="Altura (m)">
-                <button id="calcular-imc">Calcular</button>
-                <p id="resultado-imc"></p>
+
+                <input type="number" id="peso" placeholder="Peso (kg)">
+
+                <input type="number" id="altura" placeholder="Altura (m)" step="0.01">
+
+                <select id="genero">
+
+                    <option value="homem">
+                        Homem
+                    </option>
+
+                    <option value="mulher">
+                        Mulher
+                    </option>
+
+                </select>
+
+                <button id="btnImc">
+                    Calcular IMC
+                </button>
+
+                <p id="resultadoImc"></p>
+
             </section>
 
             <section id="temperatura" class="screen">
