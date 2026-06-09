@@ -29,6 +29,8 @@ temaBtn.addEventListener("click", () => {
 
 });
 
+
+//cotação dólar
 const btnConverter = document.getElementById("btnConverter");
 
 btnConverter.addEventListener("click", pegarCotacao);
@@ -91,6 +93,7 @@ async function pegarCotacao() {
 
 }
 
+// cálculo IMC
 const btnImc = document.getElementById("btnImc");
 
 btnImc.addEventListener("click", () => {
@@ -172,6 +175,51 @@ btnImc.addEventListener("click", () => {
 
     resultado.textContent =
         `Seu IMC é ${imc.toFixed(2)} - ${classificacao}`;
+
+});
+
+//conversor de temperatura
+const btnTemperatura =
+    document.getElementById("btnTemperatura");
+
+btnTemperatura.addEventListener("click", () => {
+
+    let valor =
+        Number(document.getElementById("valorTemperatura").value);
+
+    let tipo =
+        document.getElementById("tipoTemperatura").value;
+
+    let resultado =
+        document.getElementById("resultadoTemperatura");
+
+    if (isNaN(valor)) {
+
+        resultado.textContent =
+            "Digite um valor válido.";
+
+        return;
+    }
+
+    let conta;
+
+    if (tipo === "celsius") {
+
+        conta =
+            (valor * 1.8) + 32;
+
+        resultado.textContent =
+            `${valor}°C = ${conta.toFixed(2)}°F`;
+
+    } else {
+
+        conta =
+            (valor - 32) / 1.8;
+
+        resultado.textContent =
+            `${valor}°F = ${conta.toFixed(2)}°C`;
+
+    }
 
 });
 
