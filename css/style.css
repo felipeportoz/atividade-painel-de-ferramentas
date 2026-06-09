@@ -223,6 +223,43 @@ footer {
 }
 
 
+#velocidade.active {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#velocidade input,
+#velocidade select {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+
+    background: var(--bg);
+    color: var(--text);
+}
+
+#velocidade button {
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    background: var(--bg);
+    color: var(--text);
+}
+
+#velocidade button:hover {
+    background: var(--hover);
+}
+
+#resultadoVelocidade {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
 
 
 
