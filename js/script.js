@@ -268,3 +268,47 @@ btnVelocidade.addEventListener("click", () => {
 
 });
 
+const btnMassa =
+    document.getElementById("btnMassa");
+
+btnMassa.addEventListener("click", () => {
+
+    let valor =
+        Number(document.getElementById("valorMassa").value);
+
+    let tipo =
+        document.getElementById("tipoMassa").value;
+
+    let resultado =
+        document.getElementById("resultadoMassa");
+
+    if (isNaN(valor)) {
+
+        resultado.textContent =
+            "Digite um valor válido.";
+
+        return;
+    }
+
+    let conta;
+
+    if (tipo === "kg") {
+
+        conta =
+            valor * 2.20462;
+
+        resultado.textContent =
+            `${valor} Kg = ${conta.toFixed(2)} Libras`;
+
+    } else {
+
+        conta =
+            valor / 2.20462;
+
+        resultado.textContent =
+            `${valor} Libras = ${conta.toFixed(2)} Kg`;
+
+    }
+
+});
+
