@@ -186,8 +186,41 @@ footer {
     font-weight: bold;
 }
 
+#temperatura.active {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
 
+#temperatura input,
+#temperatura select {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
 
+    background: var(--bg);
+    color: var(--text);
+}
+
+#temperatura button {
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    background: var(--bg);
+    color: var(--text);
+}
+
+#temperatura button:hover {
+    background: var(--hover);
+}
+
+#resultadoTemperatura {
+    font-size: 18px;
+    font-weight: bold;
+}
 
 
 
