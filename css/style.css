@@ -146,53 +146,38 @@ footer {
 
 #moedas.active {
     display: flex;
-    justify-content: center;
-}
-
-.moeda-box {
-    width: 100%;
-    max-width: 450px;
-
-    display: flex;
     flex-direction: column;
     gap: 15px;
 }
 
-.moeda-box input,
-.moeda-box select {
-    padding: 12px;
-
-    border: 1px solid var(--border);
+#moedas input,
+#moedas select {
+    padding: 10px;
     border-radius: 8px;
-
+    border: 1px solid var(--border);
     background: var(--bg);
     color: var(--text);
 }
 
-.moeda-box button {
-    padding: 12px;
-
+#moedas button {
+    padding: 10px;
     border: none;
     border-radius: 8px;
-
-    cursor: pointer;
-
     background: var(--bg);
     color: var(--text);
-
-    transition: .3s;
+    cursor: pointer;
 }
 
-.moeda-box button:hover {
+#moedas button:hover {
     background: var(--hover);
 }
 
-#cotacao {
+#resultadoMoeda {
+    font-size: 20px;
     font-weight: bold;
 }
 
-#resultado-moeda {
-    font-size: 20px;
+#cotacaoAtual {
     font-weight: bold;
 }
 

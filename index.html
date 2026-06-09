@@ -40,35 +40,33 @@
         <section class="content">
 
             <section id="moedas" class="screen active">
+
                 <h2>Conversor de Moedas</h2>
 
-                <div class="moeda-box">
+                <input type="number" id="valorMoeda" placeholder="Digite o valor">
 
-                    <input type="number" id="valor-moeda" placeholder="Digite o valor" step="0.01">
+                <select id="tipoConversao">
 
-                    <select id="tipo-conversao">
+                    <option value="usd">
+                        USD → BRL
+                    </option>
 
-                        <option value="usd-brl">
-                            USD → BRL
-                        </option>
+                    <option value="brl">
+                        BRL → USD
+                    </option>
 
-                        <option value="brl-usd">
-                            BRL → USD
-                        </option>
+                </select>
 
-                    </select>
+                <button id="btnConverter">
+                    Converter
+                </button>
 
-                    <button id="btn-converter">
-                        Converter
-                    </button>
+                <p id="cotacaoAtual">
+                    Cotação atual: --
+                </p>
 
-                    <p id="cotacao">
-                        Cotação: carregando...
-                    </p>
+                <p id="resultadoMoeda"></p>
 
-                    <p id="resultado-moeda"></p>
-
-                </div>
             </section>
 
             <section id="imc" class="screen">
