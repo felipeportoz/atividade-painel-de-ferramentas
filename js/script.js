@@ -19,6 +19,8 @@ buttons.forEach(button => {
 
 });
 
+
+// tema dark mode
 const temaBtn = document.getElementById("tema-btn");
 
 temaBtn.addEventListener("click", () => {
@@ -27,9 +29,3 @@ temaBtn.addEventListener("click", () => {
 
 });
 
-//codigo do professor
-// const elemento = {
-//     aside:document.querySelector("aside"),
-// };
-
-// console.log(aside);
